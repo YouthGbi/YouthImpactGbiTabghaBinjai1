@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YOUTH IMPACT GBI TABGHA BINJAI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      color: #ffffff;
+      background-color: #000;
+    }
+
+    header {
+      background: #0a0a23;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 1em 2em;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav a, .album-icon {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .album-icon {
+      font-size: 20px;
+    }
+
+    .hero {
+      background-image: url('latarbelakang.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-content {
+      text-align: center;
+      padding: 20px;
+      backdrop-filter: blur(3px);
+    }
+
+    .hero-content h1 {
+      font-size: 6vw;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-content p {
+      font-size: 4.5vw;
+      font-weight: bold;
+      color: #f50e0e;
+    }
+
+    .hero-content img {
+      width: 40vw;
+      height: 40vw;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #0a0a23;
+      margin-top: 20px;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .album-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .album-buttons button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .gallery {
+      display: none;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: flex-start;
+      gap: 30px;
+      font-size: 50px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      color: #0a0a23;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      background: #0a0a23;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: top center;
+      }
+
+      .hero-content h1 {
+        font-size: 7vw;
+      }
+
+      .hero-content p {
+        font-size: 5vw;
+      }
+
+      .hero-content img {
+        width: 50vw;
+        height: 50vw;
+      }
+
+      .social-icons {
+        font-size: 35px;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      header {
+        text-align: center;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a, .album-icon {
+        margin: 5px 10px;
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div><strong>YOUTH GBI TABGHA BINJAI</strong></div>
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <span class="album-icon" onclick="scrollToAlbum()">📁 Album</span>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Selamat Datang di Youth GBI TABGHA BINJAI</h1>
+    <p>Komunitas Pemuda yang Memberkati Generasi</p>
+    <img src="logo youth1.jpg" alt="Foto Profil">
+  </div>
+</section>
+
+<section class="section" id="tentang">
+  <h2>Jadwal ibadah</h2>
+  <p>SETIAP HARI SABTU PUKUL 17.00</p>
+</section>
+
+<section class="section" id="albumSection">
+  <h2>Album YOUTH Impact</h2>
+  <div class="album-buttons">
+    <button onclick="showAlbum('album1')">NATAL YOUTH: TRUE OFFERING 13.12.2024</button>
+    <button onclick="showAlbum('album2')">Retreat Youth: PROVEN FAITH 15-16.09.2024</button>
+    <button onclick="showAlbum('album3')">NATAL YOUTH: 15.03.2023</button>
+  </div>
+  <div class="gallery" id="album1">
+    <img src="natal youth.jpg" alt="Album Natal Youth">
+    <img src="natal youth1.jpg" alt="Album Natal Youth">
+    <img src="natal youth2.jpg" alt="Album Natal Youth">
+    <img src="natal youth3.jpg" alt="Album Natal Youth">
+    <img src="natal youth4.jpg" alt="Album Natal Youth">
+    <img src="natal youth5.jpg" alt="Album Natal Youth">
+    <img src="natal youth6.jpg" alt="Album Natal Youth">
+    <img src="natal youth7.jpg" alt="Album Natal Youth">
+    <img src="natal youth8.jpg" alt="Album Natal Youth">
+    <img src="natal youth9.jpg" alt="Album Natal Youth">
+  </div>
+  <div class="gallery" id="album2">
+    <img src="retreat youth.jpg" alt="Album Retreat Youth">
+    <img src="retreat youth1.jpg" alt="Album Retreat Youth">
+    <img src="retreat youth2.jpg" alt="Album Retreat Youth">
+    <img src="retreat youth3.jpg" alt="Album Retreat Youth">
+    <img src="retreat youth4.jpg" alt="Album Retreat Youth">
+    <img src="retreat youth5.jpg" alt="Album Retreat Youth">
+    <img src="retreat youth6.jpg" alt="Album Retreat Youth">
+    <img src="retreat youth7.jpg" alt="Album Retreat Youth">
+  </div>
+  <div class="gallery" id="album3">
+    <img src="natalyouth2023.jpg" alt="Album Natal Youth 2023">
+    <img src="natalyouth20231.jpg" alt="Album Natal Youth 2023">
+    <img src="natalyouth20232.jpg" alt="Album Natal Youth 2023">
+    <img src="natalyouth20233.jpg" alt="Album Natal Youth 2023">
+    <img src="natalyouth20234.jpg" alt="Album Natal Youth 2023">
+    <img src="natalyouth20235.jpg" alt="Album Natal Youth 2023">
+  </div>
+</section>
+
+<section class="section" id="layanan">
+  <h2>Temukan Kami</h2>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/iyouth" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://web.facebook.com/Gbihouseoftabgha1" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.google.com/maps/place/GBI+House+Of+Tabgha+Binjai" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+  </div>
+</section>
+<audio id="audioPlayer" autoplay loop>
+  <source src="Praise feat Brandon Lake Chris Brown Chandler Moore Elevation Worship.mp3" type="audio/mp3">
+</audio>
+
+<section class="section" id="kontak">
+  <h2>Hubungi Kami</h2>
+  <p>WhatsApp: Sdri IRMA 085277282843 (Ketua Youth)</p>
+</section>
+
+<footer>
+  &copy; 2025 YOUTH IMPACT GBI TABGHA BINJAI
+</footer>
+
+<script>
+  function scrollToAlbum() {
+    document.getElementById('albumSection').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function showAlbum(id) {
+    const galleries = document.querySelectorAll('.gallery');
+    galleries.forEach(g => g.style.display = 'none');
+    const selected = document.getElementById(id);
+    if (selected) {
+      selected.style.display = 'grid';
+      selected.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  document.getElementById('audioPlayer').muted = false;
+  document.getElementById('audioPlayer').volume = 1; // 100% volume
+</script>
+
+</body>
+</html>
